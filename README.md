@@ -28,6 +28,8 @@ You can:
 
 5. You may need to edit your vehicles table to include last withdrawl. Every time someone takes a vehicle from a garage we record is so we can keep track of if people are driving those expensive imports, and we repo them if they sit too long.
 
+6. You need the mysql2 rubygem.
+
 # Examples
 
 ## Find Duplicate Items (weapon serial numbers)
