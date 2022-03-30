@@ -13,12 +13,12 @@ You can:
 # How do configure
 1. Configure a mysql config file, it's harcoded in the scripts as /etc/.db.cnf, you can change this to anything. It should look like below:
 
-    [client]
-    user=USERNAMEHERE
-    password=PASSWORDHERE
-    database=DATABASENAME
-    port=PORTHERE
-    host=IPHERE
+        [client]
+        user=USERNAMEHERE
+        password=PASSWORDHERE
+        database=DATABASENAME
+        port=PORTHERE
+        host=IPHERE
 
 2. Change the table names to what your tables are called. Mine are called `players`, `stashitems`, `trunkitems, `gloveboxitems` etc. You'll need to edit the scripts if your DB schema is different.
 
