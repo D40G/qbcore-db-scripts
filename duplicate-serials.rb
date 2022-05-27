@@ -46,10 +46,6 @@ players.each do |row|
             inventory.each do |e|
                 next if e == nil
 
-                if Debug == true then
-                    pp e
-                end
-
                 if e.class == Hash then
                     next if e["name"] =~ /evidence/
                     next if e["name"] =~ /casing/
