@@ -172,6 +172,7 @@ trunk.each do |row|
             if e.class == Hash then
                 if e.has_key?("info") then
                     next if e["info"] == []
+                    next if e["info"] == ""
                     if e["info"].has_key?("serie") then
                         serial = e["info"]["serie"]
                         next if serial == ""
@@ -225,6 +226,7 @@ glovebox.each do |row|
             if e.class == Hash then
                 if e.has_key?("info") then
                     next if e["info"] == []
+                    next if e["info"] == ""
                     if e["info"].has_key?("serie") then
                         serial = e["info"]["serie"]
                         next if serial == ""
