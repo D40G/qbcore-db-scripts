@@ -41,7 +41,8 @@ players.each do |row|
         charinfo = JSON.parse(row["charinfo"])
         cid = row["citizenid"] 
 
-        charinfomap[cid] = charinfo["charname"]
+        charname = charinfo["firstname"] + " " + charinfo["lastname"]
+        charinfomap[cid] = charname
 
         if row["inventory"] != nil then
             inventory = JSON.parse(row["inventory"])
