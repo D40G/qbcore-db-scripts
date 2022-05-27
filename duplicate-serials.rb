@@ -134,9 +134,9 @@ stash.each do |row|
             if e.class == Array then
                 next if e[1]["name"] =~ /evidence/
                 next if e[1]["name"] =~ /casing/
+                next if e[1]["info"] == []
+                next if e[1]["info"] == ""
                 if e[1].has_key?("info") then
-                    next if e[1]["info"] == []
-                    next if e[1]["info"] == ""
                     if e[1]["info"].has_key?("serie") then
 
                         owner = stashmap[stash]
