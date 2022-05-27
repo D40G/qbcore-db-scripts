@@ -7,7 +7,7 @@ require 'json'
 #############
 # Variables #
 #############
-Debug = true
+Debug = false
 serials = Hash.new { |hash, key| hash[key] = [] }
 guntype = Hash.new { |hash, key| hash[key] = [] }
 stashmap = Hash.new
@@ -55,6 +55,7 @@ players.each do |row|
                     next if e["name"] =~ /casing/
                     next if e.class == Array
                     if e.has_key?("info") then
+                        next if e["info"] == []
                         if e["info"].has_key?("serie") then
                             serial = e["info"]["serie"]
                             next if serial == ""
