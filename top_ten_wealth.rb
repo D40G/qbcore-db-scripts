@@ -25,7 +25,6 @@ end
 # Main #
 ########
 
-array = %x[cat vehicles.txt].split("\n")
 
 array = []
 File.readlines('vehicles.txt').each do |line|
