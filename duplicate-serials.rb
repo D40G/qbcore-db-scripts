@@ -71,6 +71,7 @@ players.each do |row|
                     next if e[1]["name"] =~ /evidence/
                     next if e[1]["name"] =~ /casing/
                     if e[1].has_key?("info") then
+                        next if e[1]["info"] == []
                         if e[1]["info"].has_key?("serie") then
                             serial = e[1]["info"]["serie"]
                             next if serial == ""
