@@ -110,13 +110,13 @@ stash.each do |row|
             if e.class == Hash then
                 next if e["name"] =~ /evidence/
                 next if e["name"] =~ /casing/
+                next if e["info"] == []
+                next if e["info"] == ""
                 if e.has_key?("info") then
                     if Debug == true then 
                         pp e 
                     end
 
-                    next if e["info"]["serie"] == []
-                    next if e["info"]["serie"] == ""
                     if e["info"].has_key?("serie") then
                         serial = e["info"]["serie"]
                         next if serial == ""
