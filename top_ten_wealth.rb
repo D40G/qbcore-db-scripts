@@ -45,7 +45,9 @@ players.each do |row|
     if valid_json?(row["charinfo"]) then
         charinfo = JSON.parse(row["charinfo"])
         cid = row["citizenid"]
-        charinfomap[cid] = charinfo["charname"]
+
+        charname = charinfo["firstname"] + " " + charinfo["lastname"]
+        charinfomap[cid] = charname
 
         if valid_json?(row["money"]) then
             money = JSON.parse(row["money"])
