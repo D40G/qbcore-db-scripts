@@ -56,6 +56,7 @@ players.each do |row|
                     next if e.class == Array
                     if e.has_key?("info") then
                         next if e["info"] == []
+                        next if e["info"] == ""
                         if e["info"].has_key?("serie") then
                             serial = e["info"]["serie"]
                             next if serial == ""
