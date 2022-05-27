@@ -44,7 +44,7 @@ players.each do |row|
 
             inventory.each do |e|
                 next if e == nil
-
+                pp e
                 if e.class == Hash then
                     next if e["name"] =~ /evidence/
                     next if e["name"] =~ /casing/
@@ -176,6 +176,7 @@ trunk.each do |row|
 
             if e.class == Array then
                 if e[1].has_key?("info") then
+                    next if e[1]["info"] == []
                     if e[1]["info"].has_key?("serie") then
 
                         owner = stashmap[plate]
